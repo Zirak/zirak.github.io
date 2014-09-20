@@ -1,0 +1,15 @@
+body {
+	font-family : sans;
+	margin : 2em;
+}
+
+#header {
+	font-weight : normal;
+}
+
+a {
+	text-decoration : none;
+}
+a:hover {
+	text-decoration : underline;
+}
