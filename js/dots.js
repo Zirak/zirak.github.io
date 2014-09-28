@@ -1,5 +1,4 @@
 /*global setTimeout*/
-
 var canvas = document.getElementById('dots'),
     ctx = canvas.getContext('2d');
 
@@ -19,9 +18,6 @@ var Dot = {
 		ctx.closePath();
 
 		ctx.fillStyle = dot.colour;
-		if (ctx.fillStyle !== dot.colour) {
-			console.warn(dot);
-		}
 		ctx.fill();
 	},
 
@@ -34,7 +30,7 @@ var Dot = {
 
 			dot.killTimeout = setTimeout(function () {
 				dot.radiusDelta = origDelta * -1;
-			}, 2000 * 1/dots.length);
+			}, 1500 * 1/dots.length);
 		}
 
 		dot.radius += dot.radiusDelta;
@@ -53,7 +49,7 @@ setTimeout(function render () {
 		return dot.radius > 0;
 	});
 
-	ctx.clearRect(0, 0, canvas.height, canvas.width);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 	dots.forEach(function (dot) {
 		Dot.draw(dot, ctx);
@@ -69,16 +65,18 @@ function addDot () {
 
 		radius : 1,
 		maxRadius : Math.random() * 7 + 20,
-		radiusDelta : Math.random()
+		radiusDelta : Math.random() + 0.1
     });
 
 	console.log(dots.slice());
 
     function randomColour () {
-        return '#' + [randHex(), randHex(), randHex()].join('');
+        return 'rgba(' +
+			[randColour(), randColour(), randColour()].join(', ') +
+			', 0.1)';
+
     }
-    function randHex () {
-        var hex = Math.floor(Math.random()*0xff).toString(16);
-		return ('00' + hex).slice(-2);
+    function randColour () {
+        return Math.floor(Math.random()*0xff);
     }
 }

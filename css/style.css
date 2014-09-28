@@ -1,44 +1,48 @@
 @font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto.woff) format('woff');
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto.woff) format('woff');
 }
 @font-face {
-  font-family: 'VT323';
-  font-style: normal;
-  font-weight: 400;
-  src: local('VT323'), local('VT323-Regular'), url(fonts/VT323.woff) format('woff');
+    font-family: 'VT323';
+    font-style: normal;
+    font-weight: 400;
+    src: local('VT323'), local('VT323-Regular'), url(fonts/VT323.woff) format('woff');
 }
 
 
 * {
     box-sizing: border-box;
 }
+
 body {
     margin: 0;
     padding: 0;
-    color: #222;
+    color: #ccc;
     font-family:'Roboto', sans-serif;
     background: url(images/dots.png);
+    background-color : #3d3d3d;
 }
 
 header {
     text-align: center;
     padding-top: 2.5rem;
 }
-header h1 {
-    font-size: 3rem;
+header .awesome {
+    font-size: 2rem;
+    display : inline;
+    color : yellow
 }
 header p {
-    display: inline;
-    padding: 0 16px;
-    border-bottom: 1px solid #444;
+    padding : 0;
+    margin : 0;
 }
 header .more {
     font-size: 2.6rem;
     padding-top : 1rem;
 }
+
 .content {
     text-align: center;
 }
@@ -50,30 +54,9 @@ header .more {
     border-radius: 4px;
     padding: 2rem 2rem 1rem;
 }
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    color: #444;
-}
-.copyright {
-    position: absolute;
-    left: 16px;
-    top: 50%;
-    color: #333;
-}
-.social {
-    list-style: none;
-    float: right;
-    margin-right: 16px;
-}
-.social li {
-    display: inline-block;
-    font-size: 2.2rem;
-    margin: 0 16px;
-}
-.social li a {
-    color: currentColor;
+.content a {
+    text-decoration : none;
+    color : inherit;
 }
 
 .logo {
@@ -82,10 +65,9 @@ footer {
     width: 124px;
     text-align: center;
     line-height: 82px;
-    font-size: 4rem;
+    font-size: 3rem;
     color : inherit;
 }
-
 .logo#jsh {
     font-family: 'VT323', monospace;
     border-radius: 2px;
@@ -95,12 +77,12 @@ footer {
 }
 
 #dots {
-	position : absolute;
-	top : 0;
-	left : 0;
+    position : absolute;
+    top : 0;
+    left : 0;
 
-	padding : 0;
-	margin : 0;
+    padding : 0;
+    margin : 0;
 
-	z-index : -1;
+    z-index : -1;
 }
