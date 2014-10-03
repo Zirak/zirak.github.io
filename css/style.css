@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+html {
+	min-height : 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -23,6 +27,11 @@ body {
     font-family:'Roboto', sans-serif;
     background: url(images/dots.png);
     background-color : #3d3d3d;
+}
+
+a {
+    text-decoration : none;
+    color : darkcyan;
 }
 
 header {
@@ -53,10 +62,6 @@ header .more {
     box-shadow: inset 0 0 30px rgba(0,0,0,0.1);
     border-radius: 4px;
     padding: 2rem 2rem 1rem;
-}
-.content a {
-    text-decoration : none;
-    color : inherit;
 }
 
 .logo {
