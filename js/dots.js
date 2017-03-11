@@ -7,7 +7,7 @@ function resizeCanvas () {
 	canvas.height = bbox.height;
 	canvas.width = bbox.width;
 }
-resizeCanvas();
+window.addEventListener('load', resizeCanvas);
 window.addEventListener('resize', resizeCanvas);
 
 var dots = [];
@@ -67,8 +67,6 @@ function addDot () {
 		maxRadius : Math.random() * 7 + 20,
 		radiusDelta : Math.random() + 0.1
     });
-
-	console.log(dots.slice());
 
     function randomColour () {
         return 'rgba(' +
