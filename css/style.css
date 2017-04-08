@@ -2,13 +2,13 @@
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
-    src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto.woff) format('woff');
+    src: local('Roboto Regular'), local('Roboto-Regular'), url(../fonts/Roboto.woff) format('woff');
 }
 @font-face {
     font-family: 'VT323';
     font-style: normal;
     font-weight: 400;
-    src: local('VT323'), local('VT323-Regular'), url(fonts/VT323.woff) format('woff');
+    src: local('VT323'), local('VT323-Regular'), url(../fonts/VT323.woff) format('woff');
 }
 
 
@@ -28,7 +28,7 @@ body {
     background: url(images/dots.png);
     background-color : #3d3d3d;
 
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 a {
